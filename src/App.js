@@ -1,10 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import Homepage from './components/Homepage';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 
 function App() {
   return (
     <div className="App">
-     <h1>Full Stack pre-assignment</h1>
+      <AppBar>
+        <Toolbar>
+          <Typography variant ='h5'>My Brewery list</Typography>
+        </Toolbar>
+      </AppBar>
+      <Homepage />
     </div>
   );
 }
