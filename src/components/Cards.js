@@ -11,7 +11,7 @@ export default function Cards( { brewery }) {
         display: 'grid', 
         gridTemplateColumns:'repeat(3, 1fr)',
          gridGap: 70,
-         margin: 100
+         margin: 70
          }}>
     {brewery.map((brewery, index) => {
         return (

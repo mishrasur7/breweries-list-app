@@ -1,6 +1,8 @@
+import { Button, TextField } from "@mui/material";
 import { flexbox } from "@mui/system";
 import React, {useState, useEffect} from "react";
 import Cards from "./Cards";
+import Searchbrewry from "./Searchbrewery";
 
 function Homepage() {
         //creates state for breweries
@@ -24,7 +26,8 @@ function Homepage() {
 
         return(
             <>
-                <Cards brewery={breweries}/>
+            <Searchbrewry />            
+            <Cards brewery={breweries}/>
             </>
         ); 
 }
