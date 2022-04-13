@@ -6,9 +6,9 @@ import { AppBar, Toolbar, Typography } from '@mui/material';
 function App() {
   return (
     <div className="App">
-      <AppBar>
-        <Toolbar>
-          <Typography variant ='h5'>My Brewery list</Typography>
+      <AppBar >
+        <Toolbar >
+          <Typography variant ='h4' >My Brewery list</Typography>
         </Toolbar>
       </AppBar>
       <Homepage />

@@ -19,10 +19,12 @@ function Homepage() {
             .catch(err => console.error(err))
         }
 
-        const breweryList = breweries.map(brewery => <Cards brewery={brewery}/>)
+        // const breweryList = breweries.map(brewery => 
+        //     <Cards brewery={brewery}/>)
+
         return(
             <>
-                {breweryList}
+                <Cards brewery={breweries}/>
             </>
         ); 
 }
