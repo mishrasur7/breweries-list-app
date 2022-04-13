@@ -23,8 +23,6 @@ function Brewerydetail () {
           .catch(err => console.error(err))
       }
 
-
-
     return (
         <Card>
             <CardContent>

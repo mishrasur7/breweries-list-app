@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Homepage from './components/Homepage';
 import { AppBar, Toolbar, Typography } from '@mui/material';
