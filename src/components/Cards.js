@@ -1,27 +1,29 @@
 import * as React from 'react';
-import Grid from '@mui/material/Grid';
-import { Button, Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Typography } from '@mui/material';
+import Detailbutton from './Detailbutton';
 
 
 export default function Cards( { brewery }) {
-    const moreDetail = () => {
 
-    }
-    
   return (
-    <div style={{display: 'grid', gridTemplateColumns:'repeat(3, 1fr)', gridGap: 50, margin: 100}}>
-    {brewery.map((brewery) => {
+    <div 
+    style={{
+        display: 'grid', 
+        gridTemplateColumns:'repeat(3, 1fr)',
+         gridGap: 70,
+         margin: 100
+         }}>
+    {brewery.map((brewery, index) => {
         return (
-                <Grid>
-                <Card>
+                <Card key={index}>
                     <CardContent>
-                        <Typography>{brewery.name}</Typography>
-                        <Typography>{brewery.brewery_type}</Typography>
-                        <Typography>{brewery.city}</Typography>
-                        <Button onClick={moreDetail}>More details</Button>
+                        <div></div>
+                        <Typography><b>Name:</b> {brewery.name}</Typography>
+                        <Typography><b>Type:</b> {brewery.brewery_type}</Typography>
+                        <Typography><b>City:</b> {brewery.city}</Typography>
+                        <Detailbutton brewery={brewery} />
                     </CardContent>
                 </Card>
-                </Grid>
         ); 
     })}
     </div>
