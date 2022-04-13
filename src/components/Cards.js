@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 import Detailbutton from './Detailbutton';
+import Searchbrewry from './Searchbrewery';
 
 
 export default function Cards( { brewery }) {
-
+   
   return (
     <div 
     style={{
@@ -17,7 +18,6 @@ export default function Cards( { brewery }) {
         return (
                 <Card key={index}>
                     <CardContent>
-                        <div></div>
                         <Typography><b>Name:</b> {brewery.name}</Typography>
                         <Typography><b>Type:</b> {brewery.brewery_type}</Typography>
                         <Typography><b>City:</b> {brewery.city}</Typography>

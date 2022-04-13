@@ -21,13 +21,9 @@ function Homepage() {
             .catch(err => console.error(err))
         }
 
-        // const breweryList = breweries.map(brewery => 
-        //     <Cards brewery={brewery}/>)
-
         return(
             <>
-            <Searchbrewry />            
-            <Cards brewery={breweries}/>
+            <Searchbrewry brewery={breweries}/>
             </>
         ); 
 }
