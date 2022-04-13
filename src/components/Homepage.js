@@ -12,7 +12,7 @@ function Homepage() {
     
         //creates fetchBreweries const
         const fetchBreweries = () => {
-            fetch(process.env.REACT_APP_API_URL)
+            fetch('https://api.openbrewerydb.org/breweries')
             .then(response => response.json())
             .then(responseData => setBreweries(responseData))
             .catch(err => console.error(err))
