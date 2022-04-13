@@ -9,26 +9,21 @@ export default function Cards( { brewery }) {
     }
     
   return (
-    <div style={{marginTop: 50}}>
-        {brewery.map((brewery, index) => {
-            return (
-                <Grid 
-                container 
-                spacing={3}
-                >
-                    <Grid item xs={3} key={index} style={{marginTop: 50, marginLeft: 50}}>
-                    <Card>
-                        <CardContent>
-                            <Typography>{brewery.name}</Typography>
-                            <Typography>{brewery.brewery_type}</Typography>
-                            <Typography>{brewery.city}</Typography>
-                            <Button onClick={moreDetail}>More details</Button>
-                        </CardContent>
-                    </Card>
-                    </Grid>
+    <div style={{display: 'grid', gridTemplateColumns:'repeat(3, 1fr)', gridGap: 50, margin: 100}}>
+    {brewery.map((brewery) => {
+        return (
+                <Grid>
+                <Card>
+                    <CardContent>
+                        <Typography>{brewery.name}</Typography>
+                        <Typography>{brewery.brewery_type}</Typography>
+                        <Typography>{brewery.city}</Typography>
+                        <Button onClick={moreDetail}>More details</Button>
+                    </CardContent>
+                </Card>
                 </Grid>
-            ); 
-        })}
+        ); 
+    })}
     </div>
   );
 }
