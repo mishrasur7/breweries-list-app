@@ -49,7 +49,7 @@ function Searchbrewry ( { brewery }) {
         }).map((value, key) => {
             return (
                 <div>
-                <Card key={key}>
+                <Card>
                     <CardContent>
                         <Typography><b>Name:</b> {value.name}</Typography>
                         <Typography><b>Type:</b> {value.brewery_type}</Typography>
