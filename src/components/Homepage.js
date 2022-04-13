@@ -1,7 +1,4 @@
-import { Button, TextField } from "@mui/material";
-import { flexbox } from "@mui/system";
 import React, {useState, useEffect} from "react";
-import Cards from "./Cards";
 import Searchbrewry from "./Searchbrewery";
 
 function Homepage() {

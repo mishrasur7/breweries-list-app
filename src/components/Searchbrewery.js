@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { TextField } from "@mui/material";
+import { TextField, IconButton} from "@mui/material";
 import { Card, CardContent, Typography } from '@mui/material';
 import Detailbutton from "./Detailbutton";
+import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 
 function Searchbrewry ( { brewery }) {
     //creates a state to save input city value
     const [city, setCity] = useState('');
    
-
+    //updates the searched city value to the city state
     const cityCanged = (event) => {
         setCity(event.target.value); 
     }
@@ -19,10 +20,17 @@ function Searchbrewry ( { brewery }) {
             value={city}
             onChange={cityCanged}
             id="outlined-basic" 
-            label="Search by city name" 
+            label="Search..." 
             variant="filled"
-            style={{width: 700}}
-            />            
+            style={{width: 600}}
+            InputProps={{
+                endAdornment: (
+                    <IconButton>
+                        <SearchSharpIcon />
+                    </IconButton>
+                )
+            }}
+            />         
         </div>
         <div
           style={{
@@ -32,20 +40,20 @@ function Searchbrewry ( { brewery }) {
              margin: 70
              }}
         >
-        {brewery.filter((val) => {
+        {brewery.filter((value) => {
             if(city === "") {
-                return val
-            } else if (val.city.toLowerCase().includes(city.toLowerCase())) {
-                return val
+                return value
+            } else if (value.city.toLowerCase().includes(city.toLowerCase())) {
+                return value
             }
-        }).map((val, key) => {
+        }).map((value, key) => {
             return (
                 <div>
-                <Card>
+                <Card key={key}>
                     <CardContent>
-                        <Typography><b>Name:</b> {val.name}</Typography>
-                        <Typography><b>Type:</b> {val.brewery_type}</Typography>
-                        <Typography><b>City:</b> {val.city}</Typography>
+                        <Typography><b>Name:</b> {value.name}</Typography>
+                        <Typography><b>Type:</b> {value.brewery_type}</Typography>
+                        <Typography><b>City:</b> {value.city}</Typography>
                         <Detailbutton brewery={brewery}/>
                     </CardContent>
                 </Card>

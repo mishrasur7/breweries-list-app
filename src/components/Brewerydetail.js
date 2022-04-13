@@ -1,9 +1,10 @@
-import { Card, CardContent, Typography } from "@mui/material";
+import { Button, Card, CardContent, Typography } from "@mui/material";
 import React, { useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 
 
-function Brewerydetail (brewery) {
+function Brewerydetail () {
+ 
       //creates state for breweries
       const [breweries, setBreweries] = useState([]);
       const { id } = useParams();
@@ -27,8 +28,17 @@ function Brewerydetail (brewery) {
     return (
         <Card>
             <CardContent>
-                <Typography>{breweryDetail.name}</Typography>
-                <Typography>Go Back</Typography>
+                <Typography>Showing detail about each brewery</Typography>
+                <Typography>Name: {breweryDetail.name}</Typography>
+                <Typography>Type: {breweryDetail.brewery_type}</Typography>
+                <Typography> Street: {breweryDetail.street}</Typography>
+                <Typography>Address-2: {breweryDetail.address_2}</Typography>
+                <Typography>Address-3: {breweryDetail.address_3}</Typography>
+                <Typography>City: {breweryDetail.city}</Typography>
+                <Typography>State: {breweryDetail.state}</Typography>
+                <Typography>Country province: {breweryDetail.country_province}</Typography>
+                <Typography>Postal code: {breweryDetail.postal_code}</Typography>
+                <Button>Go back</Button>
             </CardContent>
         </Card>
     ); 
