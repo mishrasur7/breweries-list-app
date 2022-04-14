@@ -54,7 +54,7 @@ function Searchbrewry ( { brewery }) {
                         <Typography><b>Name:</b> {value.name}</Typography>
                         <Typography><b>Type:</b> {value.brewery_type}</Typography>
                         <Typography><b>City:</b> {value.city}</Typography>
-                        <Detailbutton brewery={brewery}/>
+                        <Detailbutton props={value}/>
                     </CardContent>
                 </Card>
                 </div>

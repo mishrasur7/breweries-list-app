@@ -2,7 +2,6 @@ import './App.css';
 import Homepage from './components/Homepage';
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Brewerydetail from './components/Brewerydetail';
 
 function App() {
   return (
@@ -14,8 +13,7 @@ function App() {
       </AppBar>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Homepage />} />
-          <Route exact path="/:id" element={<Brewerydetail />}/>
+          <Route exact path="/" element={<Homepage />}></Route>
         </Routes> 
       </BrowserRouter>
     </div>
