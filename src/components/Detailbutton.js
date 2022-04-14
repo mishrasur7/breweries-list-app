@@ -13,20 +13,19 @@ function Detailbutton ( { props }) {
         <div>
         <Dialog open={open}>
             <DialogTitle>
-                
+                <h2><b>More information</b></h2> 
             </DialogTitle>
             <Card>
             <CardContent>
-                <Typography><h2><b>More information</b></h2></Typography>
-                <Typography>Name: {props.name}</Typography>
-                <Typography>Type: {props.brewery_type}</Typography>
-                <Typography> Street: {props.street}</Typography>
-                <Typography>Country: {props.country}</Typography>
-                <Typography>Phone: {props.phone}</Typography>
-                <Typography>City: {props.city}</Typography>
-                <Typography>State: {props.state}</Typography>
-                <Typography>Website URL: {props.website_url}</Typography>
-                <Typography>Postal code: {props.postal_code}</Typography>
+                <Typography><b>Name: </b>{props.name}</Typography>
+                <Typography><b>Type: </b>{props.brewery_type}</Typography>
+                <Typography><b>Street: </b>{props.street}</Typography>
+                <Typography><b>Country: </b>{props.country}</Typography>
+                <Typography><b>Phone: </b>{props.phone}</Typography>
+                <Typography><b>City: </b>{props.city}</Typography>
+                <Typography><b>State: </b>{props.state}</Typography>
+                <Typography><b>Website URL: </b>{props.website_url}</Typography>
+                <Typography><b>Postal code: </b>{props.postal_code}</Typography>
                 <Button
                 style={{marginTop: 25}} 
                 variant="contained" 
